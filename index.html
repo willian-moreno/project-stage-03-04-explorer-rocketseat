@@ -250,12 +250,11 @@
   <script type="text/javascript">
     document.querySelectorAll('input[data-mask="phone"]')
       .forEach(input => input.addEventListener('input', (event) => {
-        const value = event.target.value
-        event.target.value = value.trim().replace(/\D/, '')
+        const value = event.target.value.trim().replace(/\D/, '')
 
-        if (value.length >= 11) {
-          event.target.value = value.replace(/^\(?(\d{2})\)?\s?(\d{5})\-?(\d{4}).*/, '($1) $2-$3')
-        }
+        event.target.value = value.length < 11
+          ? value
+          : value.replace(/^\(?(\d{2})\)?\s?(\d{5})\-?(\d{4}).*/, '($1) $2-$3')
       }))
 
     document.querySelectorAll('input[data-mask="link"]')
