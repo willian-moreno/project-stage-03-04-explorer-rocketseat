@@ -254,7 +254,10 @@
         event.target.value = event.target.value
           .trim()
           .replace(/\D/, '')
-          .replace(/(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3')
+
+        if (/^\(?\d{2}\)?\s?\d{5}\-?\d{4}\d*/.test(event.target.value)) {
+          event.target.value.replace(/(\d{2})(\d{5})(\d{4})\d*/, '($1) $2-$3')
+        }
       }))
 
     document.querySelectorAll('input[data-mask="link"]')
