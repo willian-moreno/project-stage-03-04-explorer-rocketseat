@@ -52,6 +52,7 @@
             class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
             minlength="8"
             maxlength="255"
+            autocomplete="off"
             required>
         </div>
 
@@ -67,6 +68,7 @@
             name="event-link"
             class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
             data-mask="link"
+            autocomplete="off"
             required>
         </div>
 
@@ -82,6 +84,7 @@
             class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
             data-mask="phone"
             minlength="11"
+            autocomplete="tel-area-code"
             required>
         </div>
 
@@ -93,6 +96,7 @@
           <textarea id="extra-information"
             name="extra-information"
             class="p-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
+            autocomplete="off"
             rows="5"></textarea>
         </div>
 
@@ -105,6 +109,7 @@
             id="category"
             name="category"
             class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 appearance-none bg-[url('./assets/svgs/caret.svg')] bg-no-repeat bg-[right_0.5rem_center] focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
+            autocomplete="off"
             required>
             <option value="live"
               selected
@@ -141,6 +146,7 @@
             name="admin-email"
             class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
             maxlength="255"
+            autocomplete="email"
             required>
         </div>
 
@@ -157,6 +163,7 @@
             class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
             minlength="8"
             maxlength="100"
+            autocomplete="off"
             required>
         </div>
 
@@ -165,6 +172,7 @@
             id="is-private"
             name="is-private"
             class="peer w-6 h-6 bg-gray-50 rounded-lg border border-slate-200 appearance-none invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-none transition-all duration-150"
+            autocomplete="off"
             required>
           <label for="is-private"
             class="text-zinc-600 text-sm font-normal font-['Poppins'] leading-normal">Evento privado</label>
@@ -198,6 +206,7 @@
               id="date"
               name="date"
               class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150 w-full"
+              autocomplete="off"
               required>
           </div>
 
@@ -210,6 +219,7 @@
               id="from-time"
               name="from-time"
               class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150 w-full"
+              autocomplete="off"
               required>
           </div>
 
@@ -222,6 +232,7 @@
               id="to-time"
               name="to-time"
               class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150 w-full"
+              autocomplete="off"
               required>
           </div>
         </div>
