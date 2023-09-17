@@ -83,7 +83,8 @@
             name="whatsapp-contact"
             class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
             data-mask="phone"
-            minlength="15"
+            minlength="11"
+            maxlength="15"
             autocomplete="tel"
             required>
         </div>
@@ -251,10 +252,11 @@
     document.querySelectorAll('input[data-mask="phone"]')
       .forEach(input => input.addEventListener('input', (event) => {
         const value = event.target.value.trim().replace(/\D/, '')
+        event.target.value = value
 
-        event.target.value = value.length < 11
-          ? value
-          : value.replace(/(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3')
+        if (value.length >= 11) {
+          event.target.value = value.replace(/(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3')
+        }
       }))
 
     document.querySelectorAll('input[data-mask="link"]')
