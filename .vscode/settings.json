@@ -1,0 +1,12 @@
+{
+	"html.format.wrapAttributes": "force",
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features",
+		"files.encoding": "utf8"
+	},
+	"markdownlint.config": {
+		"no-inline-html": false,
+		"first-line-heading": false,
+		"single-trailing-newline": false
+	}
+}

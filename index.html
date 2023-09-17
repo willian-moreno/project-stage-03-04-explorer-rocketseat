@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Events Manager</title>
+</head>
+
+<body class="m-0 p-0 box-border bg-zinc-300 shadow-[inset_0_21rem_#000000]">
+  <header class="flex flex-col gap-6 w-[46rem] mx-auto pt-16 pb-6 max-w-[calc(100vw-3rem)]">
+    <h1 class="text-white text-4xl font-bold font-['Archivo'] leading-10 max-w-[20rem]">
+      Crie e compartilhe seu evento.
+    </h1>
+    <p class="text-sky-400 text-base font-normal font-['Poppins'] leading-relaxed max-w-[20rem]">
+      O primeiro passo é preencher esse formulário de inscrição.
+    </p>
+  </header>
+  <form id="event-form"
+    method="post"
+    class="flex flex-col w-[46rem] mx-auto pb-16 max-w-[calc(100vw-3rem)]">
+    <div class="flex flex-col gap-12 rounded-tl-lg rounded-tr-lg lg:p-16 md:px-10 p-6 bg-gray-50">
+      <fieldset class="flex flex-col gap-6">
+        <legend class="text-indigo-950 text-2xl font-semibold font-['Archivo']">
+          Informações do Evento
+        </legend>
+        <hr class="border border-slate-200 mt-3">
+
+        <div class="flex flex-col gap-2">
+          <label for="event-title"
+            class="text-zinc-600 text-sm font-normal font-['Poppins'] leading-normal">
+            Título do evento <span
+              class="text-stone-300 text-xs hover:text-zinc-500 transition-colors duration-300">(mínimo de 8
+              caracteres)</span>
+          </label>
+          <input type="text"
+            id="event-title"
+            name="event-title"
+            class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
+            minlength="8"
+            maxlength="255"
+            required>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="event-link"
+            class="text-zinc-600 text-sm font-normal font-['Poppins'] leading-normal">
+            Link do evento <span
+              class="text-stone-300 text-xs hover:text-zinc-500 transition-colors duration-300">(comece com
+              https://)</span>
+          </label>
+          <input type="text"
+            id="event-link"
+            name="event-link"
+            class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
+            data-mask="link"
+            required>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="whatsapp-contact"
+            class="text-zinc-600 text-sm font-normal font-['Poppins'] leading-normal">
+            Whatsapp para contato <span
+              class="text-stone-300 text-xs hover:text-zinc-500 transition-colors duration-300">(somente números)</span>
+          </label>
+          <input type="tel"
+            id="whatsapp-contact"
+            name="whatsapp-contact"
+            class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
+            data-mask="phone"
+            minlength="11"
+            required>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="extra-information"
+            class="text-zinc-600 text-sm font-normal font-['Poppins'] leading-normal">
+            Informações extras
+          </label>
+          <textarea id="extra-information"
+            name="extra-information"
+            class="p-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
+            rows="5"></textarea>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="category"
+            class="text-zinc-600 text-sm font-normal font-['Poppins'] leading-normal">
+            Categoria
+          </label>
+          <select type="text"
+            id="category"
+            name="category"
+            class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 appearance-none bg-[url('/assets/svgs/caret.svg')] bg-no-repeat bg-[right_0.5rem_center] focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
+            required>
+            <option value="live"
+              selected
+              class="text-stone-300 text-base font-normal font-['Poppins'] leading-relaxed">
+              Ao vivo
+            </option>
+            <option value="podcast"
+              class="text-stone-300 text-base font-normal font-['Poppins'] leading-relaxed">
+              Podcast
+            </option>
+            <option value="mentorship"
+              class="text-stone-300 text-base font-normal font-['Poppins'] leading-relaxed">
+              Mentoria
+            </option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset class="flex flex-col gap-6">
+        <legend class="text-indigo-950 text-2xl font-semibold font-['Archivo']">
+          Privacidade
+        </legend>
+        <hr class="border border-slate-200 mt-3">
+
+        <div class="flex flex-col gap-2">
+          <label for="admin-email"
+            class="text-zinc-600 text-sm font-normal font-['Poppins'] leading-normal">
+            E-mail do administrador <span
+              class="text-stone-300 text-xs hover:text-zinc-500 transition-colors duration-300">(digite um email
+              válido)</span>
+          </label>
+          <input type="email"
+            id="admin-email"
+            name="admin-email"
+            class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
+            maxlength="255"
+            required>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="password"
+            class="text-zinc-600 text-sm font-normal font-['Poppins'] leading-normal">
+            Senha de acesso para os participantes <span
+              class="text-stone-300 text-xs hover:text-zinc-500 transition-colors duration-300">(mínimo de 8
+              caracteres)</span>
+          </label>
+          <input type="password"
+            id="password"
+            name="password"
+            class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
+            minlength="8"
+            maxlength="100"
+            required>
+        </div>
+
+        <div class="flex items-center gap-4 select-none">
+          <input type="checkbox"
+            id="is-private"
+            name="is-private"
+            class="peer w-6 h-6 bg-gray-50 rounded-lg border border-slate-200 appearance-none invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-none transition-all duration-150"
+            required>
+          <label for="is-private"
+            class="text-zinc-600 text-sm font-normal font-['Poppins'] leading-normal">Evento privado</label>
+          <svg class="absolute w-4 h-4 ms-1 hidden peer-checked:block pointer-events-none text-sky-400"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke="text-sky-400"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+      </fieldset>
+
+      <fieldset class="flex flex-col gap-6">
+        <legend class="text-indigo-950 text-2xl font-semibold font-['Archivo']">
+          Dia e hora
+        </legend>
+        <hr class="border border-slate-200 mt-3">
+
+        <div class="grid md:grid-cols-[2fr_1fr_1fr] gap-3">
+          <div class="flex flex-col gap-2">
+            <label for="date"
+              class="text-zinc-600 text-sm font-normal font-['Poppins'] leading-normal">
+              Data
+            </label>
+            <input type="date"
+              id="date"
+              name="date"
+              class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
+              required>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="from-time"
+              class="text-zinc-600 text-sm font-normal font-['Poppins'] leading-normal">
+              Das
+            </label>
+            <input type="time"
+              id="from-time"
+              name="from-time"
+              class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
+              required>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="to-time"
+              class="text-zinc-600 text-sm font-normal font-['Poppins'] leading-normal">
+              Até
+            </label>
+            <input type="time"
+              id="to-time"
+              name="to-time"
+              class="px-4 min-h-[3.5rem] bg-gray-50 rounded-lg border border-slate-200 text-zinc-600 invalid:border-red-600 focus:ring focus:ring-violet-600 focus:outline-slate-300 transition-all duration-150"
+              required>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <hr class="border border-slate-200 m-0 p-0">
+    <div class="bg-gray-100 rounded-bl-lg rounded-br-lg py-6 lg:px-16 md:px-10 p-6">
+      <input type="submit"
+        form="event-form"
+        value="Salvar evento"
+        class="w-full min-h-[3.5rem] px-10 bg-green-500 hover:bg-green-600 transition-colors duration-300 rounded-lg justify-center items-center gap-2.5 inline-flex text-white text-base font-semibold font-['Archivo'] leading-relaxed focus:ring focus:ring-violet-600 focus:outline-none transition-all duration-150">
+    </div>
+  </form>
+
+  <script type="text/javascript">
+    document.querySelectorAll('input[data-mask="phone"]')
+      .forEach(input => input.addEventListener('input', (event) => {
+        event.target.value = event.target.value.trim()
+          .replace(/\D/, '')
+          .replace(/^\(?(\d{2})\)?\s?(\d{5})\-?(\d{4}).*/, '($1) $2-$3')
+      }))
+
+    document.querySelectorAll('input[data-mask="link"]')
+      .forEach(input => input.addEventListener('input', (event) => {
+        event.target.value = event.target.value.trim()
+          .replaceAll(/http+s?:?\/?\/?/g, '')
+          .replace(/(.*)/, 'https://$1')
+      }))
+  </script>
+</body>
+
+</html>
