@@ -251,11 +251,11 @@
   <script type="text/javascript">
     document.querySelectorAll('input[data-mask="phone"]')
       .forEach(input => input.addEventListener('input', (event) => {
-        const value = event.target.value.trim().replace(/\D/, '')
+        const value = event.target.value.trim().replaceAll(/\D/g, '')
 
         event.target.value = value
 
-        if (/^\(?\d{2}\)?\s?\d{5}\-?\d{4}\d*/.test(value)) {
+        if (value.length >= 11) {
           event.target.value = value.replace(/(\d{2})(\d{5})(\d{4})\d*/, '($1) $2-$3')
         }
       }))
