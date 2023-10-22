@@ -1,7 +1,7 @@
 <p align="center">Eae, Dev! 👊🏾</p>
 <p align="center">Seja bem vindo(a) ✨🚀</p>
 
-<h1 align="center">Gerenciador de Eventos</h1>
+<h1 align="center">Gerenciador de Mentorias</h1>
 <h3 align="center">Trilha Explorer - Rocketseat</h3>
 
 <p align="center">
@@ -20,7 +20,7 @@
 
 <h3>📌 Sobre</h3>
 
-O projeto é o desafio prático da trilha Explorer da Rocketseat, cujo objetivo é introduzir conceitos básicos de formulário, utilizando tags HTML como form, input, select, textarea, button, etc. Para agilizar o desenvolvimento, por opção pessoal, foi utilizado o CDN do Tailwind, para estilização.
+O projeto é o desafio prático da trilha Explorer da Rocketseat, cujo objetivo é introduzir e reforçar conceitos básicos de formulário, utilizando tags HTML como form, input, select, textarea, button, etc. Para agilizar o desenvolvimento, por opção pessoal, foi utilizado o CDN do Tailwind, para estilização.
 
 <h3>📌 Tecnologias</h3>
 
@@ -31,7 +31,7 @@ O projeto é o desafio prático da trilha Explorer da Rocketseat, cujo objetivo 
 
 <h3>📌 Layout</h3>
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/sgcJKpGAeVqh7rf2pwsOd9/Explorer-Stage-03-Projeto-01/duplicate). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/Nws1KWB7DyXBw8L6wXb9mp/Stage-03---Formul%C3%A1rio-intermedi%C3%A1rio/duplicate). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 <h3>📌 Licença</h3>
 
